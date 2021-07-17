@@ -44,10 +44,9 @@ const createOrUpdatePerson = () => {
     let postURL = site_properties.server_url;
     let methodCall = "POST";
     if(isUpdate){
-        let methodCall = "PUT";
-        postURL = postURL + "/" + personDataObj.id.toString();
+        alert(isUpdate);
         methodCall = "PUT";
-        postURL = postURL+"/"+personDataObj.id.toString();
+        postURL = postURL + "/" + personDataObj.id.toString();
     }
     makeServiceCall(methodCall,postURL,true,personDataObj)
      .then(responseText => {
